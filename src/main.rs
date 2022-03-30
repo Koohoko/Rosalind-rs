@@ -1,6 +1,6 @@
 use std::io;
-use rosalind_rs::string_algorithms::dna;
+use rosalind_rs::string_algorithms::rna;
 
 fn main() -> io::Result<()>{
-    dna::solve("inputs/dna.txt")
+    rna::solve("inputs/rna.txt")
 }

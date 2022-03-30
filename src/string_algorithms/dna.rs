@@ -24,7 +24,7 @@ fn count_nt(input: String) -> (u32, u32, u32, u32) {
 }
 
 pub fn solve(file_path: &str) -> io::Result<()>{
-	let input = std::fs::read_to_string(file_path).expect("read error");
+	let input = std::fs::read_to_string(file_path)?;
 	let nt_count  = count_nt(input);
 	println!("{:?}", nt_count);
 	Ok(())
