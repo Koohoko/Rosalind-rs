@@ -1,6 +1,6 @@
 use std::io;
-use rosalind_rs::string_algorithms::rna;
+use rosalind_rs::string_algorithms::revc;
 
 fn main() -> io::Result<()>{
-    rna::solve("inputs/rna.txt")
+    revc::solve("inputs/revc.txt")
 }
