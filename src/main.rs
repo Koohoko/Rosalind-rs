@@ -3,7 +3,7 @@ use std::process;
 mod bioinformatics_stronghold;
 
 fn main() {
-    if let Err(e) = bioinformatics_stronghold::fib::count_rabbit("inputs/fib.txt"){
+    if let Err(e) = bioinformatics_stronghold::grph::grph("inputs/grph.txt"){
         eprintln!("Application error: {}", e);
         process::exit(1)
     }
