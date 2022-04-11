@@ -1,6 +1,10 @@
-use std::io;
-use rosalind_rs::string_algorithms::revc;
+// use std::io;
+use std::process;
+mod bioinformatics_stronghold;
 
-fn main() -> io::Result<()>{
-    revc::solve("inputs/revc.txt")
+fn main() {
+    if let Err(e) = bioinformatics_stronghold::fib::count_rabbit("inputs/fib.txt"){
+        eprintln!("Application error: {}", e);
+        process::exit(1)
+    }
 }

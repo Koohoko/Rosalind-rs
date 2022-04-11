@@ -1,1 +1,1 @@
-pub mod string_algorithms;
+pub mod bioinformatics_stronghold;

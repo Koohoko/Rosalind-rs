@@ -1,4 +1,5 @@
-use std::io;
+// use std::io;
+use std::error::Error;
 
 fn count_nt(input: String) -> (u32, u32, u32, u32) {
 	let mut a_count: u32 = 0;
@@ -23,7 +24,8 @@ fn count_nt(input: String) -> (u32, u32, u32, u32) {
 	(a_count, c_count, g_count, t_count)
 }
 
-pub fn solve(file_path: &str) -> io::Result<()>{
+#[allow(dead_code)]
+pub fn solve(file_path: &str) -> Result<(), Box<dyn Error>>{
 	let input = std::fs::read_to_string(file_path)?;
 	let nt_count  = count_nt(input);
 	println!("{:?}", nt_count);

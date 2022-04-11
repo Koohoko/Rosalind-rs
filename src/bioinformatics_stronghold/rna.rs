@@ -1,6 +1,8 @@
-use std::io;
+// use std::io;
+use std::error::Error;
 
-pub fn solve(file_path: &str) -> io::Result<()>{
+#[allow(dead_code)]
+pub fn solve(file_path: &str) -> Result<(), Box<dyn Error>> {
 	let mut input_string = std::fs::read_to_string(file_path)?;
 	let result  = rna(&mut input_string);
 	println!("{:?}", result);
