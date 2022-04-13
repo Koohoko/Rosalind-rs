@@ -1,6 +1,6 @@
 use std::error::Error;
 use std::fs;
-use statrs::distribution::{Binomial, Discrete, DiscreteCDF};
+use statrs::distribution::{Binomial, DiscreteCDF};
 
 #[allow(dead_code)]
 pub fn lia(filename :&str) -> Result<(), Box<dyn Error>> {
