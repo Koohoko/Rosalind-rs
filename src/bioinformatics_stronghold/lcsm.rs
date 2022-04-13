@@ -33,7 +33,7 @@ pub fn lcsm(filename :&str) -> Result<(), Box<dyn Error>> {
 	let mut final_kmer = b"".to_vec();
 	while left + 1 < right {
 		mid = (left + right) / 2;
-		println!("L:{}, R:{}, M:{}", left, right, mid);
+		println!("L:{}, R:{}, M:{}", left, right, mid); // showing binary search
 
 		let tmp = common_substr(&seq_min, &seqs, mid);
 		if tmp.0{

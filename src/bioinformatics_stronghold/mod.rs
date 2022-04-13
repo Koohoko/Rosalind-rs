@@ -12,3 +12,6 @@ pub mod fibd; // Mortal Fibonacci Rabbits
 pub mod grph; // Overlap Graphs 
 pub mod iev; // Calculating Expected Offspring
 pub mod lcsm; // Finding a Shared Motif
+pub mod prtm; // Calculating Protein Mass
+pub mod perm; // Enumerating Gene Orders
+pub mod lia; // Independent Alleles
