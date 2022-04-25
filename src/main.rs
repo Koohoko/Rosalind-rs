@@ -1,10 +1,6 @@
-// use std::io;
-use std::process;
+use std::error::Error;
 mod bioinformatics_stronghold;
 
-fn main() {
-    if let Err(e) = bioinformatics_stronghold::mrna::mrna("inputs/mrna.txt"){
-        eprintln!("Application error: {}", e);
-        process::exit(1)
-    }
+fn main() -> Result<(), Box<dyn Error>> {
+    bioinformatics_stronghold::revp::revp("inputs/revp.txt")
 }

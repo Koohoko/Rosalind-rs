@@ -16,4 +16,6 @@ pub mod prtm; // Calculating Protein Mass
 pub mod perm; // Enumerating Gene Orders
 pub mod lia; // Independent Alleles
 pub mod mprt; // Finding a Protein Motif
-pub mod mrna; // nferring mRNA from Protein
+pub mod mrna; // inferring mRNA from Protein
+pub mod orf; // Open Reading Frames
+pub mod revp; // Locating Restriction Sites
