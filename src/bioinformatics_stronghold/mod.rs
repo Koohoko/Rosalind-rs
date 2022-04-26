@@ -19,3 +19,4 @@ pub mod mprt; // Finding a Protein Motif
 pub mod mrna; // inferring mRNA from Protein
 pub mod orf; // Open Reading Frames
 pub mod revp; // Locating Restriction Sites
+pub mod splc; // RNA Splicing
