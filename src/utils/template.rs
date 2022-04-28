@@ -1,9 +1,8 @@
 use std::error::Error;
-use std::fs;
+use std::fs::read_to_string;
 
 #[allow(dead_code)]
-pub fn iev(filename :&str) -> Result<(), Box<dyn Error>> {
-	let input = fs::read_to_string(filename)?;
+pub fn solve(file_path: &str) -> Result<(), Box<dyn Error>>{
 
 	Ok(())
 }

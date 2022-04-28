@@ -9,7 +9,7 @@ pub fn solve(file_path: &str) -> Result<(), Box<dyn Error>>{
 	Ok(())
 }
 
-fn revc(input_string: & String) -> String {
+pub fn revc(input_string: & String) -> String {
 	let out_string = input_string.trim().chars().rev().map(complement).collect();
 	out_string
 }
