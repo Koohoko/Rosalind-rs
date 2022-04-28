@@ -1,6 +1,7 @@
 use std::error::Error;
 use std::fs::read_to_string;
 
+#[allow(dead_code)]
 pub fn lexf(filename:&str) -> Result<(), Box<dyn Error>>{
 	let input = read_to_string(filename)?;
 	let mut input = input.lines();
