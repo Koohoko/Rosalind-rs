@@ -23,8 +23,8 @@ pub fn mprt(filename :&str) -> Result<(), Box<dyn Error>> {
 			}).unwrap();
 			transfer.perform().unwrap();
 		}
-		let reader:&[u8] = &dst;
-		let mut fastx_reader = parse_fastx_reader(reader).expect("invalid reader");
+		let seq_input:&[u8] = &dst;
+		let mut fastx_reader = parse_fastx_reader(seq_input).expect("invalid reader");
 		while let Some(r) = fastx_reader.next() {
 			let record = r.expect("invalid record");
 			let seq = record.seq();

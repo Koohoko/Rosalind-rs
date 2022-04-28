@@ -11,24 +11,30 @@ pub fn lexf(filename:&str) -> Result<(), Box<dyn Error>>{
 	let n:usize = input.next().unwrap().trim().parse()?;
 
 	let mut str_tmp = vec![alphabets[0]; n];
+	let mut results = Vec::new();
 
-	// let i = 0_usize;
-	fn recursive(pos:usize, str_tmp:&mut Vec<char>, alphabets:&Vec<char>, n:usize) {
-		if pos == n {
-			for item in str_tmp {
-				print!("{}", item);
-			}
-			println!("");
-			return;
+	recursive(0, &mut str_tmp, &alphabets, n, &mut results);
+	
+	for str_i in results {
+		for item in str_i {
+			print!("{}", item);
 		}
-		
-		for i in 0..alphabets.len() {
-			str_tmp[pos] = alphabets[i];
-			recursive(pos+1, str_tmp, alphabets, n);
-		}
-		
+		println!("");
 	}
+	
 
-	recursive(0, &mut str_tmp, &alphabets, n);
 	Ok(())
+}
+
+pub fn recursive(pos:usize, str_tmp:&mut Vec<char>, alphabets:&Vec<char>, n:usize, results:&mut Vec<Vec<char>>) {
+	if pos == n {
+		results.push(str_tmp.clone());
+		return;
+	}
+	
+	for i in 0..alphabets.len() {
+		str_tmp[pos] = alphabets[i];
+		recursive(pos+1, str_tmp, alphabets, n, results);
+	}
+	
 }
