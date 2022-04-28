@@ -22,3 +22,4 @@ pub mod revp; // Locating Restriction Sites
 pub mod splc; // RNA Splicing
 pub mod lexf; // Enumerating k-mers Lexicographically 
 pub mod lexv; // Ordering Strings of Varying Length Lexicographically
+pub mod sign; // Enumerating Oriented Gene Orderings
