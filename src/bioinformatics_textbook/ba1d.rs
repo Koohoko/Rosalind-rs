@@ -17,7 +17,7 @@ pub fn solve(file_path: &str) -> Result<(), Box<dyn Error>>{
 	Ok(())
 }
 
-fn pattern_match(text:&[u8], p:&[u8]) -> Vec<usize>{
+pub fn pattern_match(text:&[u8], p:&[u8]) -> Vec<usize>{
 	let k = p.len();
 	let mut id:usize = 0;
 	let mut matches:Vec<usize> = Vec::new();
